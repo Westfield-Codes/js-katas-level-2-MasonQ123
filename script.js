@@ -3,9 +3,8 @@
 // Who will be gatekeeper and keymaster today?
 
 /* Global Variables */
-// Create an array called students, start empty. 
+// Create an array called students, start empty.
 // Create an array called picked, start empty. 
-
 
 /* Function Main()
  * Set variable called count to asking how many students there are.
@@ -17,13 +16,14 @@
  * @return = none
  */
 
-
+   
 /* Function addStudents(count) 
  * Use a for loop to add student names to the students array via user input.
  * The loop should run count number of times. 
  * @param = count {integer}
  * @return = none
  */
+
 
 
 /* Function randStudent(count)
