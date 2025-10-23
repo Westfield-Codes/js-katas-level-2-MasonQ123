@@ -3,9 +3,9 @@
 // Who will be gatekeeper and keymaster today?
 
 /* Global Variables */
-// Create an array called students, start empty. 
-// Create an array called picked, start empty. 
+// Create an array called students, start empty.
 var students = [];
+// Create an array called picked, start empty. 
 var picked = [];
 
 /* Function Main()
@@ -17,26 +17,26 @@ var picked = [];
  * @param = none
  * @return = none
  */
-
-function main(){ 
+function main() {
     let count = prompt("How many students are there?")
     addStudents(count);
     let gateKeeper = randStudent(count);
     let keyMaster = randNewStudent();
     alert("The gatekeeper is " + gateKeeper + " and the keymaster is " + keyMaster + ".");
 }
-
+   
 /* Function addStudents(count) 
  * Use a for loop to add student names to the students array via user input.
  * The loop should run count number of times. 
  * @param = count {integer}
  * @return = none
  */
-function addStudents(count){
+function addStudents(count) {
     for(i = 1; i <= count; i++){
         students.push(prompt("What is the name of student " + i));
     }
 }
+
 
 /* Function randStudent(count)
  * Set student = random number, 0 to length of students array.
@@ -46,9 +46,8 @@ function addStudents(count){
  * @param = count {integer}
  * @return = name {string}
  */
-
-function randStudent(count){
-    let student = Math.floor(Math.random()*count);
+function randStudent(count) {
+    let student = Math.floor(Math.random()*count)
     let name = students[student];
     picked.push(name);
     return name;
@@ -66,18 +65,15 @@ function randStudent(count){
  * @param = none
  * @return = name {string}
  */
-
-function randNewStudent(){
-    let name = "";
+function randNewStudent() {
     let student = 0;
+    let name = "";
     let pickedYet = 0;
     while(pickedYet != -1){
-        student = Math.floor(Math.random()*students.length);
+        student = Math.floor(Math.random()*students.length)
         name = students[student];
         pickedYet = picked.indexOf(name);
     }
     picked.push(name);
     return name;
 }
- 
-/* ************************************* */
